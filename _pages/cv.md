@@ -9,56 +9,32 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+You can download my full CV [here](/files/DehaoWu_Resume.pdf).
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+## Education
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* **M.S. in Information Management**, University of Illinois Urbana-Champaign, 2025 – 2027
+* **B.S. in Artificial Intelligence**, Southwest Petroleum University, 2021 – 2025
+  * GPA: 90.1/100 (Ranked 1st/77)
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+## Work Experience
 
-Publications
-======
+* **LLM Algorithm Intern** — IICT, Chinese Academy of Sciences (Apr 2025 – Jun 2025)
+  * Enhanced GraphRAG for Chinese financial, legal, and research domains by integrating structured domain ontologies and fine-tuning Qwen3 for domain-specific NER, improving entity extraction by 8–10%.
+  * Built production-ready vertical Q&A assistants that reduced hallucination by 25%+ and improved long-chain reasoning accuracy by 20%.
+  * Contributed to a High-Tech Enterprise Qualification Predictor using semi-supervised learning and LLMs (92%–95%+ accuracy).
+
+* **Data Analysis Intern** — JD Group Inc, Retail AIGC Product Development (Aug 2024 – Oct 2024)
+  * Designed a RAG-based Q&A system using LangChain + ChatOpenAI, achieving +14% accuracy on multi-hop queries.
+  * Built a data pipeline with 22% noise reduction and 18% deduplication; developed a Django dashboard for sentiment/topic visualization.
+
+## Skills
+
+* **Programming & Data Science**: Python, R, SQL, Matlab, C, Pandas, NumPy, Matplotlib
+* **Machine Learning & Tools**: TensorFlow, PyTorch, Scikit-learn, RAG, Docker, Linux
+
+## Publications
+
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
