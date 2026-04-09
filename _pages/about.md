@@ -15,8 +15,9 @@ My research focuses on **AI for Science**, **Autonomous Agents**, and **Multimod
 
 ## News
 
-- **02/2026**: Working on Gene Foundation Model for unified sequence-text representation learning.
-- **01/2026**: Working on MV-CLIP for multimodal sarcasm detection.
+- **03/2026**: Working on Gene Foundation Model for unified sequence-text representation learning.
+- **02/2026**: Submitted paper on LLM-agent pipeline for protein co-abundance networks to *Bioinformatics*.
+- **01/2026**: Submitted paper on multimodal sarcasm detection to *ACM Multimedia*.
 - **08/2025**: Started M.S. at UIUC!
 
 ## Selected Honors & Awards
