@@ -9,8 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-You can download my full CV [here](/files/DehaoWu_Resume.pdf).
-
 ## Education
 
 * **M.S. in Information Science**, University of Illinois Urbana-Champaign, 2025 – 2027

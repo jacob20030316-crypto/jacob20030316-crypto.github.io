@@ -7,18 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-<style>
-.pub-list  { margin: 0 0 1.5em 0; }
-.pub-item  { margin: 0 0 1.5em 0; padding-left: 0.9em;
-             border-left: 3px solid rgba(127,127,127,0.3); }
-.pub-title { font-weight: 700; font-size: 1.02em; line-height: 1.45; margin-bottom: 0.3em; }
-.pub-meta  { font-size: 0.88em; line-height: 1.6; opacity: 0.78; }
-.pub-meta .me   { font-weight: 700; opacity: 1; }
-.pub-venue { font-style: italic; }
-.pub-role  { display: inline-block; font-size: 0.8em; letter-spacing: 0.02em;
-             text-transform: uppercase; opacity: 0.65; border: 1px solid rgba(127,127,127,0.4);
-             border-radius: 3px; padding: 0.05em 0.45em; margin-top: 0.35em; }
-</style>
+<div class="lang-switch"><a href="/zh/">中文</a></div>
 
 Hi! I am Dehao Wu, a M.S. student in Information Science at the University of Illinois Urbana-Champaign (UIUC), advised by [Prof. ChengXiang Zhai](https://czhai.cs.illinois.edu/) and [Prof. Haohan Wang](https://ischool.illinois.edu/people/haohan-wang). I received my B.S. in Artificial Intelligence from Southwest Petroleum University (Ranked 1st/77, GPA: 90.1/100). I am a big fan of football (soccer), and my favorite team is FC Barcelona.
 
@@ -75,7 +64,3 @@ AI for Science, Agent Systems, Multimodal Learning
 
 - **LLM Algorithm Intern**, IICT, Chinese Academy of Sciences (Apr 2025 – Jun 2025)
 - **Data Analysis Intern**, JD Group Inc (Aug 2024 – Oct 2024)
-
----
-
-[Download my full CV (PDF)](/files/DehaoWu_Resume.pdf)
