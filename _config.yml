@@ -22,10 +22,10 @@ repository               : "jacob20030316-crypto/jacob20030316-crypto.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Dehao Wu"
   pronouns         : # example: "she/her"
-  bio              : "M.S. in Information Management, UIUC (2025–2027) | B.S. in Artificial Intelligence, SWPU (2021–2025)"
+  bio              : "M.S. in Information Science, UIUC (2025–2027) | B.S. in Artificial Intelligence, SWPU (2021–2025)"
   location         : #
   employer         : #
   uri              : # URL
@@ -34,7 +34,7 @@ author:
   # Academic websites
   academia         : # URL
   arxiv            : # URL
-  googlescholar    : # URL
+  googlescholar    : "https://scholar.google.com/citations?user=Fb_Wft4AAAAJ&hl=en"
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : # URL
