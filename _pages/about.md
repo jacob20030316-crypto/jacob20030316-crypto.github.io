@@ -7,8 +7,6 @@ redirect_from:
   - /about.html
 ---
 
-<div class="lang-switch"><a href="/zh/">中文</a></div>
-
 Hi! I am Dehao Wu, a M.S. student in Information Science at the University of Illinois Urbana-Champaign (UIUC), advised by [Prof. ChengXiang Zhai](https://czhai.cs.illinois.edu/) and [Prof. Haohan Wang](https://ischool.illinois.edu/people/haohan-wang). I received my B.S. in Artificial Intelligence from Southwest Petroleum University (Ranked 1st/77, GPA: 90.1/100). I am a big fan of football (soccer), and my favorite team is FC Barcelona.
 
 ---
