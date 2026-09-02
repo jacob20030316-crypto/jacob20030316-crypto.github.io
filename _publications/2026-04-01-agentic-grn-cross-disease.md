@@ -5,8 +5,8 @@ category: manuscripts
 permalink: /publication/2026-04-01-agentic-grn-cross-disease
 excerpt: 'An LLM-agent framework that builds a network of gene regulatory networks at patient-subgroup resolution, comparing 212,469 network pairs across 132 diseases to recover shared regulatory programmes.'
 date: 2026-04-01
-venue: 'npj Digital Medicine (Under Review)'
-citation: 'Dehao Wu, Yuting Liao, Qiqi Xie, Yang Li, Haohan Wang. (2026). &quot;Agentic Analysis at Scale Reveals Regulators Recurring Across Patient Subgroups and Shared Between Diseases.&quot; <i>npj Digital Medicine (Under Review)</i>.'
+venue: 'Digital Discovery (Under Review)'
+citation: 'Dehao Wu, Yuting Liao, Qiqi Xie, Yang Li, Haohan Wang. (2026). &quot;Agentic Analysis at Scale Reveals Regulators Recurring Across Patient Subgroups and Shared Between Diseases.&quot; <i>Digital Discovery (Under Review)</i>.'
 ---
 
 Diseases that look unrelated in the clinic can share molecular programmes, but a mechanism visible only within patient subgroups is buried when cohorts are analysed whole. We present an LLM-agent framework that constructs a network of gene regulatory networks at patient-subgroup resolution: agents admit each public cohort and resolve the clinical characteristics it records into comparable strata, a regulatory network is estimated on every patient group, and two networks are joined by the agreement of their edge weightings.

@@ -20,7 +20,7 @@ redirect_from:
              border-radius: 3px; padding: 0.05em 0.45em; margin-top: 0.35em; }
 </style>
 
-Hi! I am Dehao Wu, a M.S. student in Information Science at the University of Illinois Urbana-Champaign (UIUC), advised by [Prof. ChengXiang Zhai](https://czhai.cs.illinois.edu/) and [Prof. Haohan Wang](https://ischool.illinois.edu/people/haohan-wang). I received my B.S. in Artificial Intelligence from Southwest Petroleum University (Ranked 1st/77, GPA: 90.1/100). I am a big fan of football (soccer), and my favorite team is FC Barcelona.
+Hi! I am Dehao Wu, a M.S. student in Information Management at the University of Illinois Urbana-Champaign (UIUC), advised by [Prof. ChengXiang Zhai](https://czhai.cs.illinois.edu/) and [Prof. Haohan Wang](https://ischool.illinois.edu/people/haohan-wang). I received my B.S. in Artificial Intelligence from Southwest Petroleum University (Ranked 1st/77, GPA: 90.1/100). I am a big fan of football (soccer), and my favorite team is FC Barcelona.
 
 ---
 
@@ -38,7 +38,7 @@ AI for Science, Agent Systems, Multimodal Learning
   <div class="pub-title">Agentic Analysis at Scale Reveals Regulators Recurring Across Patient Subgroups and Shared Between Diseases</div>
   <div class="pub-meta">
     <span class="me">Dehao Wu</span>, Yuting Liao, Qiqi Xie, Yang Li, Haohan Wang<br>
-    <span class="pub-venue">npj Digital Medicine</span> &middot; Under Review
+    <span class="pub-venue">Digital Discovery</span> &middot; Under Review
   </div>
 </div>
 

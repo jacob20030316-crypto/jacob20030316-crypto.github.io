@@ -11,7 +11,7 @@ redirect_from:
 
 ## Education
 
-* **M.S. in Information Science**, University of Illinois Urbana-Champaign, 2025 – 2027
+* **M.S. in Information Management**, University of Illinois Urbana-Champaign, 2025 – 2027
 * **B.S. in Artificial Intelligence**, Southwest Petroleum University, 2021 – 2025
   * GPA: 90.1/100 (Ranked 1st/77)
 
