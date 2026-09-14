@@ -20,7 +20,7 @@ redirect_from:
              border-radius: 3px; padding: 0.05em 0.45em; margin-top: 0.35em; }
 </style>
 
-Hi! I am Dehao Wu, a M.S. student in Information Management at the University of Illinois Urbana-Champaign (UIUC), advised by [Prof. ChengXiang Zhai](https://czhai.cs.illinois.edu/) and [Prof. Haohan Wang](https://ischool.illinois.edu/people/haohan-wang). I received my B.S. in Artificial Intelligence from Southwest Petroleum University (Ranked 1st/77, GPA: 90.1/100). I am a big fan of football (soccer), and my favorite team is FC Barcelona.
+Hi! I am Dehao Wu, a M.S. student in Information Management at the University of Illinois Urbana-Champaign (UIUC), advised by [Prof. ChengXiang Zhai](https://czhai.cs.illinois.edu/) and [Prof. Haohan Wang](https://ischool.illinois.edu/people/haohan-wang). I received my B.S. in Artificial Intelligence from Southwest Petroleum University (Ranked 1st/77, GPA: 90.1/100). I am a huge football (soccer) fan, I enjoy listening to xiangsheng (Chinese crosstalk comedy), and I am currently working on my fitness.
 
 ---
 
