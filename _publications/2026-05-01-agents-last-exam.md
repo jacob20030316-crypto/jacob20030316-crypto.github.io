@@ -1,10 +1,11 @@
 ---
-title: "Agents' Last Exam (ALE): Benchmarking AI Agents on Long-Horizon, Economically Valuable Tasks"
+title: "Agents' Last Exam"
 collection: publications
 category: conferences
 permalink: /publication/2026-05-01-agents-last-exam
 excerpt: 'A living benchmark evaluating AI agents on long-horizon, economically valuable real-world tasks with verifiable outcomes, developed with 250+ industry experts. Contributed as a data contributor.'
 date: 2026-05-01
+paperurl: 'https://arxiv.org/abs/2606.05405'
 venue: 'NeurIPS 2026 (Under Review)'
 citation: 'ALE Team (Yiyou Sun, Xinyang Han, Weichen Zhang, ..., Dehao Wu, ..., Dawn Song). (2026). &quot;Agents&apos; Last Exam.&quot; <i>NeurIPS 2026 (Under Review)</i>. Dehao Wu contributed as a data contributor.'
 ---

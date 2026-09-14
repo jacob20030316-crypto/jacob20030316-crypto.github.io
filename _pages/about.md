@@ -30,12 +30,12 @@ AI for Science, Agent Systems, Multimodal Learning
 
 ---
 
-## Publications
+## Research Experience
 
 <div class="pub-list" markdown="0">
 
 <div class="pub-item">
-  <div class="pub-title">Agentic Analysis at Scale Reveals Regulators Recurring Across Patient Subgroups and Shared Between Diseases</div>
+  <div class="pub-title">Large-scale agentic analysis identifies recurrent regulators linking diseases across patient subgroups</div>
   <div class="pub-meta">
     <span class="me">Dehao Wu</span>, Yuting Liao, Qiqi Xie, Yang Li, Haohan Wang<br>
     <span class="pub-venue">Digital Discovery</span> &middot; Under Review
@@ -43,10 +43,10 @@ AI for Science, Agent Systems, Multimodal Learning
 </div>
 
 <div class="pub-item">
-  <div class="pub-title">An LLM-Agent Pipeline for the Generation and Comparison of Protein Co-Abundance Networks in Different Human Tissues</div>
+  <div class="pub-title">Agentic AI uncovers conserved cross-tissue protein co-abundance programs inaccessible to single-dataset analysis</div>
   <div class="pub-meta">
     Runyu Guan<sup>&#42;</sup>, <span class="me">Dehao Wu</span><sup>&#42;</sup>, Qiqi Xie, Yang Li, Haohan Wang &nbsp;<small>(<sup>&#42;</sup>equal contribution)</small><br>
-    <span class="pub-venue">Bioinformatics</span> &middot; Under Review
+    <span class="pub-venue">Bioinformatics</span> &middot; Under Review &middot; <a href="https://arxiv.org/pdf/2608.28990" target="_blank" rel="noopener">[arXiv]</a>
   </div>
 </div>
 
@@ -59,10 +59,10 @@ AI for Science, Agent Systems, Multimodal Learning
 </div>
 
 <div class="pub-item">
-  <div class="pub-title">Agents&#39; Last Exam (ALE): Benchmarking AI Agents on Long-Horizon, Economically Valuable Tasks</div>
+  <div class="pub-title">Agents&#39; Last Exam</div>
   <div class="pub-meta">
     ALE Team &mdash; Yiyou Sun, Xinyang Han, Weichen Zhang, &hellip;, <span class="me">Dehao Wu</span>, &hellip;, Dawn Song<br>
-    <span class="pub-venue">NeurIPS 2026</span> &middot; Under Review<br>
+    <span class="pub-venue">NeurIPS 2026</span> &middot; Under Review &middot; <a href="https://arxiv.org/abs/2606.05405" target="_blank" rel="noopener">[arXiv]</a><br>
     <span class="pub-role">Data contributor</span>
   </div>
 </div>
