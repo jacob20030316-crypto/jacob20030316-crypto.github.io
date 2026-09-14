@@ -53,7 +53,7 @@ AI for Science, Agent Systems, Multimodal Learning
 <div class="pub-item">
   <div class="pub-title">Focus on What You Need: Global-to-Local Dynamic Attention for Multimodal Sarcasm Detection</div>
   <div class="pub-meta">
-    <span class="me">Dehao Wu</span>, Xingjie Zhuang, Haohan Wang<br>
+    <span class="me">Dehao Wu</span>, Xingjie Zhuang<br>
     <span class="pub-venue">ICASSP 2026</span> &middot; Under Review
   </div>
 </div>
