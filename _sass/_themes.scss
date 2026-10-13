@@ -622,13 +622,13 @@ html[data-theme="dark"] .home-dw {
 }
 
 .home-dw ol.bibliography > li:hover .paper-summary,
-.home-dw ol.bibliography > li:focus-within .paper-summary {
+.home-dw ol.bibliography > li:has(:focus-visible) .paper-summary {
   grid-template-rows: 1fr;
   opacity: 1;
 }
 
 .home-dw ol.bibliography > li:hover .paper-summary > p,
-.home-dw ol.bibliography > li:focus-within .paper-summary > p {
+.home-dw ol.bibliography > li:has(:focus-visible) .paper-summary > p {
   padding-top: 0.55rem;
 }
 
