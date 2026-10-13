@@ -1,0 +1,241 @@
+---
+layout: default
+---
+<div class="post home-dw">
+  <canvas class="hero-net" aria-hidden="true"></canvas>
+  <header class="post-header">
+    <p class="hero-eyebrow">Urbana–Champaign, IL</p>
+    <h1 class="post-title">
+      {% if site.title == 'blank' %}
+        <span class="hero-name">{{ site.first_name }} <em>{{ site.last_name }}</em></span>
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </h1>
+    <p class="desc">{{ page.subtitle }}</p>
+    {% if page.social %}
+      <div class="hero-social">
+        <div class="contact-icons">{% social_links %}</div>
+      </div>
+    {% endif %}
+  </header>
+
+  <article>
+    {% if page.profile %}
+      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+        {% if page.profile.image %}
+          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+          {% if page.profile.image_circular %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+          {% else %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+          {% endif %}
+          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
+      30vw, 95vw"{% endcapture %}
+          {%
+            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+            cache_bust=true
+          %}
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% comment %} Split page content: everything after the <!--MISC--> marker renders after the papers. {% endcomment %}
+    {% assign content_parts = content | split: '<!--MISC-->' %}
+
+    <div class="clearfix intro">{{ content_parts[0] }}</div>
+
+    {% if page.selected_papers %}
+      <h2>Research Experience</h2>
+      {% include selected_papers.liquid %}
+    {% endif %}
+
+    {% if content_parts.size > 1 %}
+      <div class="clearfix tail">{{ content_parts[1] }}</div>
+    {% endif %}
+  </article>
+
+  <noscript>
+    <style>
+      .home-dw .post-header,
+      .home-dw article h2,
+      .home-dw ol.bibliography > li,
+      .home-dw .timeline > li,
+      .home-dw .hobbies > li {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+  <script>
+    (function () {
+      var root = document.querySelector('.home-dw');
+      if (!root) return;
+      var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var fine = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+      // Scroll reveal
+      var sel = '.post-header, article h2, ol.bibliography > li, .timeline > li, .hobbies > li';
+      var nodes = Array.prototype.slice.call(root.querySelectorAll(sel));
+      ['ol.bibliography > li', '.timeline > li', '.hobbies > li'].forEach(function (s) {
+        root.querySelectorAll(s).forEach(function (el, i) {
+          el.style.transitionDelay = i * 0.07 + 's';
+        });
+      });
+      if (!('IntersectionObserver' in window)) {
+        nodes.forEach(function (el) {
+          el.classList.add('in-view');
+        });
+      } else {
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add('in-view');
+                io.unobserve(e.target);
+                setTimeout(function () {
+                  e.target.style.transitionDelay = '';
+                }, 1200);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+        );
+        nodes.forEach(function (el) {
+          io.observe(el);
+        });
+      }
+
+      // Publication cards: cursor spotlight + subtle 3D tilt
+      if (fine && !reduceMotion) {
+        root.querySelectorAll('ol.bibliography > li').forEach(function (card) {
+          var row = card.querySelector('.row');
+          card.addEventListener('pointermove', function (e) {
+            var r = card.getBoundingClientRect();
+            var px = e.clientX - r.left;
+            var py = e.clientY - r.top;
+            card.style.setProperty('--mx', px + 'px');
+            card.style.setProperty('--my', py + 'px');
+            if (row) {
+              var rx = (py / r.height - 0.5) * -4;
+              var ry = (px / r.width - 0.5) * 4;
+              row.style.transform = 'translateY(-5px) perspective(900px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)';
+            }
+          });
+          card.addEventListener('pointerleave', function () {
+            if (row) row.style.transform = '';
+          });
+        });
+      }
+
+      // Hero: drifting agent network that links up to the cursor
+      var canvas = root.querySelector('.hero-net');
+      if (!canvas || !canvas.getContext) return;
+      var ctx = canvas.getContext('2d');
+      var html = document.documentElement;
+      var nodesN = [], w = 0, h = 0, mouse = null, raf = null, visible = true;
+      var LINK = 120;
+      function palette() {
+        var dark = html.getAttribute('data-theme') === 'dark';
+        return dark ? ['163,198,227', '139,152,240', '120,214,224'] : ['63,125,166', '91,111,216', '47,184,198'];
+      }
+      var pal = palette();
+      new MutationObserver(function () {
+        pal = palette();
+        if (reduceMotion) draw();
+      }).observe(html, { attributes: true, attributeFilter: ['data-theme'] });
+
+      function resize() {
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        w = canvas.clientWidth;
+        h = canvas.clientHeight;
+        canvas.width = w * dpr;
+        canvas.height = h * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        var n = Math.round(Math.min(64, (w * h) / 9000));
+        nodesN = [];
+        for (var i = 0; i < n; i++) {
+          nodesN.push({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            vx: (Math.random() - 0.5) * 0.28,
+            vy: (Math.random() - 0.5) * 0.28,
+            r: Math.random() < 0.18 ? 2.6 : 1.5,
+            c: Math.floor(Math.random() * 3)
+          });
+        }
+      }
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+        for (var i = 0; i < nodesN.length; i++) {
+          var a = nodesN[i];
+          for (var j = i + 1; j < nodesN.length; j++) {
+            var b = nodesN[j], dx = a.x - b.x, dy = a.y - b.y, d = Math.sqrt(dx * dx + dy * dy);
+            if (d < LINK) {
+              ctx.strokeStyle = 'rgba(' + pal[0] + ',' + (0.24 * (1 - d / LINK)).toFixed(3) + ')';
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(a.x, a.y);
+              ctx.lineTo(b.x, b.y);
+              ctx.stroke();
+            }
+          }
+          if (mouse) {
+            var mx = a.x - mouse.x, my = a.y - mouse.y, md = Math.sqrt(mx * mx + my * my);
+            if (md < LINK * 1.5) {
+              ctx.strokeStyle = 'rgba(' + pal[1] + ',' + (0.4 * (1 - md / (LINK * 1.5))).toFixed(3) + ')';
+              ctx.beginPath();
+              ctx.moveTo(a.x, a.y);
+              ctx.lineTo(mouse.x, mouse.y);
+              ctx.stroke();
+            }
+          }
+          ctx.fillStyle = 'rgba(' + pal[a.c] + ',' + (a.r > 2 ? 0.75 : 0.5) + ')';
+          ctx.beginPath();
+          ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+      function step() {
+        for (var i = 0; i < nodesN.length; i++) {
+          var n = nodesN[i];
+          n.x += n.vx;
+          n.y += n.vy;
+          if (n.x < -10) n.x = w + 10;
+          else if (n.x > w + 10) n.x = -10;
+          if (n.y < -10) n.y = h + 10;
+          else if (n.y > h + 10) n.y = -10;
+        }
+        draw();
+        raf = visible ? requestAnimationFrame(step) : null;
+      }
+      resize();
+      if (reduceMotion) draw();
+      else raf = requestAnimationFrame(step);
+      var rt;
+      window.addEventListener('resize', function () {
+        clearTimeout(rt);
+        rt = setTimeout(function () {
+          resize();
+          if (reduceMotion) draw();
+        }, 150);
+      });
+      if (!reduceMotion) {
+        var header = root.querySelector('.post-header');
+        header.addEventListener('pointermove', function (e) {
+          var r = canvas.getBoundingClientRect();
+          mouse = { x: e.clientX - r.left, y: e.clientY - r.top };
+        });
+        header.addEventListener('pointerleave', function () {
+          mouse = null;
+        });
+        if ('IntersectionObserver' in window) {
+          new IntersectionObserver(function (entries) {
+            visible = entries[0].isIntersecting;
+            if (visible && !raf) raf = requestAnimationFrame(step);
+          }).observe(canvas);
+        }
+      }
+    })();
+  </script>
+</div>

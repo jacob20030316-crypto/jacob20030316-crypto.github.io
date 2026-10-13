@@ -1,77 +1,52 @@
 ---
+layout: about
+title: About
 permalink: /
-title: "About Me"
-author_profile: true
-redirect_from: 
+subtitle: M.S. in Information Science at <a href='https://illinois.edu/'>UIUC</a>. Agentic AI · large language models · multi-agent systems · AI for science.
+redirect_from:
   - /about/
   - /about.html
+
+profile:
+  align: right
+  image: prof_pic.jpg
+  image_circular: false
+
+selected_papers: true
+social: true
+
+announcements:
+  enabled: false
+
+latest_posts:
+  enabled: false
 ---
 
-<style>
-.pub-list  { margin: 0 0 1.5em 0; }
-.pub-item  { margin: 0 0 1.5em 0; padding-left: 0.9em;
-             border-left: 3px solid rgba(127,127,127,0.3); }
-.pub-title { font-weight: 700; font-size: 1.02em; line-height: 1.45; margin-bottom: 0.3em; }
-.pub-meta  { font-size: 0.88em; line-height: 1.6; opacity: 0.78; }
-.pub-meta .me   { font-weight: 700; opacity: 1; }
-.pub-venue { font-style: italic; }
-.pub-role  { display: inline-block; font-size: 0.8em; letter-spacing: 0.02em;
-             text-transform: uppercase; opacity: 0.65; border: 1px solid rgba(127,127,127,0.4);
-             border-radius: 3px; padding: 0.05em 0.45em; margin-top: 0.35em; }
-</style>
+Hi! I am **Dehao Wu**, a M.S. student in Information Science at the University of Illinois Urbana-Champaign (UIUC), advised by [Prof. ChengXiang Zhai](https://czhai.cs.illinois.edu/) and [Prof. Haohan Wang](https://ischool.illinois.edu/people/haohan-wang).
 
-Hi! I am Dehao Wu, a M.S. student in Information Management at the University of Illinois Urbana-Champaign (UIUC), advised by [Prof. ChengXiang Zhai](https://czhai.cs.illinois.edu/) and [Prof. Haohan Wang](https://ischool.illinois.edu/people/haohan-wang). I received my B.S. in Artificial Intelligence from Southwest Petroleum University (Ranked 1st/77, GPA: 90.1/100). I am a huge football (soccer) fan (FC Barcelona), I enjoy listening to xiangsheng (Chinese crosstalk comedy), and I am currently working on my fitness.
+My research interests are **Agentic AI** and **Large Language Models**, with a focus on **Multi-Agent Systems**, **AI for Scientific Discovery**, **Biomedical AI**, and **Multimodal Learning**.
 
----
-
-## Research Interests
-
-AI for Science, Agent Systems, Multimodal Learning
-
----
-
-## Research Experience
-
-<div class="pub-list" markdown="0">
-
-<div class="pub-item">
-  <div class="pub-title">Large-scale agentic analysis identifies recurrent regulators linking diseases across patient subgroups</div>
-  <div class="pub-meta">
-    <span class="me">Dehao Wu</span>, Yuting Liao, Qiqi Xie, Yang Li, Haohan Wang<br>
-    <span class="pub-venue">Digital Discovery</span> &middot; Under Review
-  </div>
-</div>
-
-<div class="pub-item">
-  <div class="pub-title">Agentic AI uncovers conserved cross-tissue protein co-abundance programs inaccessible to single-dataset analysis</div>
-  <div class="pub-meta">
-    Runyu Guan<sup>&#42;</sup>, <span class="me">Dehao Wu</span><sup>&#42;</sup>, Qiqi Xie, Yang Li, Haohan Wang &nbsp;<small>(<sup>&#42;</sup>equal contribution)</small><br>
-    <span class="pub-venue">Bioinformatics</span> &middot; Under Review &middot; <a href="https://arxiv.org/pdf/2608.28990" target="_blank" rel="noopener">[arXiv]</a>
-  </div>
-</div>
-
-<div class="pub-item">
-  <div class="pub-title">Focus on What You Need: Global-to-Local Dynamic Attention for Multimodal Sarcasm Detection</div>
-  <div class="pub-meta">
-    <span class="me">Dehao Wu</span>, Xingjie Zhuang<br>
-    <span class="pub-venue">ICASSP 2026</span> &middot; Under Review
-  </div>
-</div>
-
-<div class="pub-item">
-  <div class="pub-title">Agents&#39; Last Exam</div>
-  <div class="pub-meta">
-    ALE Team &mdash; Yiyou Sun, Xinyang Han, Weichen Zhang, &hellip;, <span class="me">Dehao Wu</span>, &hellip;, Dawn Song<br>
-    <span class="pub-venue">NeurIPS 2026</span> &middot; Under Review &middot; <a href="https://arxiv.org/abs/2606.05405" target="_blank" rel="noopener">[arXiv]</a><br>
-    <span class="pub-role">Data contributor</span>
-  </div>
-</div>
-
-</div>
-
----
+<!--MISC-->
 
 ## Experience
 
-- **LLM Algorithm Intern**, IICT, Chinese Academy of Sciences (Apr 2025 – Jun 2025)
-- **Data Analysis Intern**, JD Group Inc (Aug 2024 – Oct 2024)
+<ul class="timeline">
+  <li>
+    <span class="tl-time">Apr 2025 – Jun 2025</span>
+    <span class="tl-role">LLM Algorithm Engineer Intern</span>
+    <span class="tl-org">IICT, Chinese Academy of Sciences</span>
+  </li>
+  <li>
+    <span class="tl-time">Aug 2024 – Oct 2024</span>
+    <span class="tl-role">Data Analysis Intern</span>
+    <span class="tl-org">JD Group Inc</span>
+  </li>
+</ul>
+
+## Hobbies
+
+<ul class="hobbies">
+  <li><i class="fa-solid fa-futbol"></i><span><b>Football</b>Huge FC Barcelona fan</span></li>
+  <li><i class="fa-solid fa-masks-theater"></i><span><b>Xiangsheng</b>Chinese crosstalk comedy</span></li>
+  <li><i class="fa-solid fa-dumbbell"></i><span><b>Fitness</b>A work in progress</span></li>
+</ul>
