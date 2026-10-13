@@ -75,13 +75,16 @@
       box.className = 'photo-lightbox';
       box.setAttribute('role', 'dialog');
       box.setAttribute('aria-modal', 'true');
-      box.innerHTML = '<img alt=""><div class="lightbox-note"></div><figcaption></figcaption>';
+      box.innerHTML =
+        '<button class="lightbox-close" type="button" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>' +
+        '<img alt=""><div class="lightbox-note"></div><figcaption></figcaption>';
       document.body.appendChild(box);
       var boxImg = box.querySelector('img');
       var boxCap = box.querySelector('figcaption');
       var boxNote = box.querySelector('.lightbox-note');
       function closeBox() {
         box.classList.remove('open');
+        document.documentElement.style.overflow = '';
       }
       box.addEventListener('click', closeBox);
       document.addEventListener('keydown', function (e) {
@@ -101,6 +104,7 @@
           boxImg.alt = a.getAttribute('data-caption') || '';
           boxCap.textContent = a.getAttribute('data-caption') || '';
           box.classList.add('open');
+          document.documentElement.style.overflow = 'hidden';
         });
       });
 
