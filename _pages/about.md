@@ -41,7 +41,7 @@ My research interests are **Agentic AI** and **Large Language Models**, with a f
     </div>
     <div class="tl-chips"><span class="tl-chip">GPA 4.00 / 4.00</span></div>
     <ul class="tl-awards">
-      <li>Gorecki Endowed Scholarship (2,000 USD)</li>
+      <li>Gorecki Endowed Scholarship</li>
     </ul>
   </li>
   <li>
@@ -50,12 +50,13 @@ My research interests are **Agentic AI** and **Large Language Models**, with a f
       <span class="tl-time">Sep 2021 – Jun 2025</span>
     </div>
     <div class="tl-sub">
-      <span class="tl-org">B.S. in Artificial Intelligence</span>
+      <span class="tl-org">B.E. in Artificial Intelligence</span>
       <span class="tl-loc">Sichuan, China</span>
     </div>
     <div class="tl-chips"><span class="tl-chip">GPA 4.01 / 5.00</span><span class="tl-chip">Ranking 1 / 77</span></div>
     <ul class="tl-awards">
       <li>Provincial Outstanding Graduate Award, 2025</li>
+      <li>Outstanding Student Leader, 2023</li>
       <li>First-Class Academic Scholarship, 2021–2022, 2022–2023, 2023–2024 &amp; 2024–2025</li>
     </ul>
   </li>
@@ -77,17 +78,43 @@ My research interests are **Agentic AI** and **Large Language Models**, with a f
 <ul class="timeline">
   <li>
     <div class="tl-head">
+      <span class="tl-role">Research Assistant</span>
+      <span class="tl-time">Jan 2026 – Present</span>
+    </div>
+    <div class="tl-sub">
+      <span class="tl-org"><a href="https://dream.ischool.illinois.edu/">DREAM Lab</a>, UIUC</span>
+      <span class="tl-loc">Champaign, IL</span>
+    </div>
+  </li>
+  <li>
+    <div class="tl-head">
+      <span class="tl-role">Research Assistant</span>
+      <span class="tl-time">Sep 2025 – Present</span>
+    </div>
+    <div class="tl-sub">
+      <span class="tl-org"><a href="https://timan.cs.illinois.edu/ir/people.html">TIMAN Lab</a>, UIUC</span>
+      <span class="tl-loc">Champaign, IL</span>
+    </div>
+  </li>
+  <li>
+    <div class="tl-head">
       <span class="tl-role">LLM Algorithm Engineer Intern</span>
       <span class="tl-time">Apr 2025 – Jun 2025</span>
     </div>
-    <div class="tl-sub"><span class="tl-org">IICT, Chinese Academy of Sciences</span></div>
+    <div class="tl-sub">
+      <span class="tl-org">IICT, Chinese Academy of Sciences</span>
+      <span class="tl-loc">Suzhou, China</span>
+    </div>
   </li>
   <li>
     <div class="tl-head">
       <span class="tl-role">Data Analysis Intern</span>
       <span class="tl-time">Aug 2024 – Oct 2024</span>
     </div>
-    <div class="tl-sub"><span class="tl-org">JD Group Inc</span></div>
+    <div class="tl-sub">
+      <span class="tl-org">JD Group Inc</span>
+      <span class="tl-loc">Beijing, China</span>
+    </div>
   </li>
 </ul>
 
