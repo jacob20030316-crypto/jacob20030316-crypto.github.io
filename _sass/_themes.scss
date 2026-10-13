@@ -264,7 +264,7 @@ html[data-theme="dark"] .home-dw {
   top: -80px;
   left: -40px;
   width: calc(100% + 80px);
-  height: 440px;
+  height: 460px;
   z-index: 0;
   pointer-events: none;
   -webkit-mask-image: radial-gradient(ellipse 65% 75% at 35% 45%, #000 25%, transparent 75%);
@@ -274,6 +274,10 @@ html[data-theme="dark"] .home-dw {
 .home-dw .post-header {
   position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 2.5rem;
+  align-items: start;
   padding: 2.2rem 0 0.5rem;
   margin-bottom: 2.6rem;
 }
@@ -375,9 +379,8 @@ html[data-theme="dark"] .home-dw {
 
 .home-dw .profile {
   position: relative;
-  width: 30%;
-  max-width: 230px;
-  margin: 0.3rem 0 1rem 2rem;
+  width: 100%;
+  margin: 0.4rem 0 0;
 }
 
 .home-dw .profile figure {
@@ -776,12 +779,19 @@ html[data-theme="dark"] .home-dw {
 }
 
 /* --- Small screens ------------------------------------------------------ */
-@media (max-width: 576px) {
-  .home-dw .profile {
-    float: none !important;
-    width: 150px;
-    margin: 0 0 1.4rem;
+@media (max-width: 768px) {
+  .home-dw .post-header {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
   }
+  .home-dw .profile {
+    order: -1;
+    width: 170px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 576px) {
   .home-dw article h2 {
     font-size: 1.55rem;
   }
