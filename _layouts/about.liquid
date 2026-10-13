@@ -8,7 +8,8 @@ layout: default
       <p class="hero-eyebrow">Urbana–Champaign, IL</p>
       <h1 class="post-title">
         {% if site.title == 'blank' %}
-          <span class="hero-name">{{ site.first_name }} <em>{{ site.last_name }}</em></span>
+          <span class="hero-name">{{ site.first_name }} {{ site.last_name }}</span>
+          <span class="hero-cn">吴德昊</span>
         {% else %}
           {{ site.title }}
         {% endif %}

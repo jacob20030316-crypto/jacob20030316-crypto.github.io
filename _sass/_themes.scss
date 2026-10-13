@@ -304,20 +304,20 @@ html[data-theme="dark"] .home-dw {
 
 .home-dw .post-header .post-title {
   margin: 0;
-  font-size: clamp(3rem, 7vw, 4.6rem);
-  line-height: 1;
-  font-weight: 600;
-  letter-spacing: -0.03em;
+  font-family: $font-body;
+  font-size: clamp(2.6rem, 5.6vw, 3.6rem);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--global-text-color);
 }
 
-.home-dw .hero-name em {
-  font-style: italic;
+.home-dw .hero-cn {
+  margin-left: 0.6rem;
+  font-size: 0.55em;
   font-weight: 400;
-  background: var(--grad);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  padding-right: 0.08em;
+  letter-spacing: 0.05em;
+  color: var(--global-text-color-light);
 }
 
 .home-dw .post-header .desc {
@@ -532,6 +532,7 @@ html[data-theme="dark"] .home-dw {
 
 .home-dw ol.bibliography .title {
   font-family: $font-body;
+  color: var(--global-text-color);
   font-size: 1.03rem;
   line-height: 1.45;
   margin-bottom: 0.25rem;
