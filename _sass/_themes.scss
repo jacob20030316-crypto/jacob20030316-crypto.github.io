@@ -830,6 +830,35 @@ html[data-theme="dark"] .home-dw {
 }
 
 /* --- Photo lightbox ----------------------------------------------------- */
+/* never let decorative layers widen the page (keeps fixed overlays centered on phones) */
+html {
+  overflow-x: clip;
+}
+
+.photo-lightbox .lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.photo-lightbox .lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.26);
+  transform: rotate(90deg);
+}
+
 .photo-lightbox {
   position: fixed;
   inset: 0;
@@ -971,6 +1000,10 @@ html[data-theme="dark"] .home-dw {
 
 /* --- Small screens ------------------------------------------------------ */
 @media (max-width: 768px) {
+  .home-dw .hero-net {
+    left: 0;
+    width: 100%;
+  }
   .home-dw .post-header {
     grid-template-columns: 1fr;
     gap: 1.8rem;
