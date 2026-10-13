@@ -243,6 +243,17 @@ nav .navbar-brand.title {
   font-family: $font-body;
 }
 
+/* Navbar brand: plain name, same weight for first and last */
+#navbar .navbar-brand.title {
+  font-family: $font-body;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em;
+}
+
+#navbar .navbar-brand.title .font-weight-bold {
+  font-weight: 700;
+}
+
 /*******************************************************************************
  * Home page — scoped to .home-dw
  ******************************************************************************/
@@ -278,12 +289,12 @@ html[data-theme="dark"] .home-dw {
   grid-template-columns: minmax(0, 1fr) 260px;
   gap: 2.5rem;
   align-items: start;
-  padding: 2.2rem 0 0.5rem;
-  margin-bottom: 2.6rem;
+  padding: 1.2rem 0 0;
+  margin-bottom: 0.5rem;
 }
 
 .home-dw .hero-eyebrow {
-  margin: 0 0 0.9rem;
+  margin: 0 0 0.7rem;
   font-family: $font-mono;
   font-size: 0.78rem;
   letter-spacing: 0.06em;
@@ -320,16 +331,18 @@ html[data-theme="dark"] .home-dw {
   color: var(--global-text-color-light);
 }
 
-.home-dw .post-header .desc {
+.home-dw .post-header .intro {
   margin-top: 1.2rem;
-  max-width: 40rem;
-  font-size: 1.06rem;
-  line-height: 1.6;
-  color: var(--global-text-color-light);
+}
+
+.home-dw .post-header .intro p {
+  margin: 0 0 0.7rem;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .home-dw .hero-social {
-  margin-top: 1.4rem;
+  margin-top: 1.1rem;
   font-size: 1.35rem;
 }
 
@@ -367,11 +380,6 @@ html[data-theme="dark"] .home-dw {
 }
 
 /* --- Intro + profile ---------------------------------------------------- */
-.home-dw .intro p {
-  font-size: 1.02rem;
-  line-height: 1.75;
-}
-
 .home-dw strong,
 .home-dw b {
   font-weight: 700;
@@ -415,8 +423,8 @@ html[data-theme="dark"] .home-dw {
   display: flex;
   align-items: baseline;
   gap: 0.8rem;
-  margin: 3.4rem 0 1.5rem;
-  font-size: 1.85rem;
+  margin: 2.6rem 0 1.2rem;
+  font-size: 1.75rem;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
@@ -461,8 +469,8 @@ html[data-theme="dark"] .home-dw {
 .home-dw ol.bibliography > li {
   position: relative;
   display: block;
-  padding: 1.15rem 1.35rem;
-  margin-bottom: 1.1rem;
+  padding: 1rem 1.3rem;
+  margin-bottom: 0.85rem;
   border-radius: 14px;
   background: var(--global-card-bg-color);
   border: 1px solid var(--global-divider-color);
@@ -554,7 +562,8 @@ html[data-theme="dark"] .home-dw {
 
 .home-dw ol.bibliography .periodical {
   margin-top: 0.45rem;
-  display: flex;
+  vertical-align: middle;
+  display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem;
@@ -591,30 +600,30 @@ html[data-theme="dark"] .home-dw {
 }
 
 .home-dw ol.bibliography .links {
-  margin-top: 0.4rem;
+  display: inline-flex;
+  vertical-align: middle;
+  margin: 0.45rem 0 0 0.6rem;
+}
+
+.home-dw ol.bibliography .links:empty {
+  display: none;
 }
 
 .home-dw ol.bibliography .links .btn {
-  border-radius: 8px;
-  font-size: 0.75rem;
-}
-
-/* one-line summary: slides open on hover (always shown on touch screens) */
-.home-dw .paper-summary {
-  display: grid;
-  grid-template-rows: 0fr;
-  opacity: 0;
-  transition:
-    grid-template-rows 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
-    opacity 0.35s ease;
-}
-
-.home-dw .paper-summary > p {
-  overflow: hidden;
   margin: 0;
+  padding: 0.05rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+/* one-line summary */
+.home-dw .paper-summary > p {
+  margin: 0.55rem 0 0;
   font-size: 0.88rem;
   line-height: 1.55;
   color: var(--global-text-color-light);
+  transition: color 0.3s ease;
 }
 
 .home-dw .paper-summary > p::before {
@@ -622,25 +631,8 @@ html[data-theme="dark"] .home-dw {
   color: var(--global-theme-color);
 }
 
-.home-dw ol.bibliography > li:hover .paper-summary,
-.home-dw ol.bibliography > li:has(:focus-visible) .paper-summary {
-  grid-template-rows: 1fr;
-  opacity: 1;
-}
-
-.home-dw ol.bibliography > li:hover .paper-summary > p,
-.home-dw ol.bibliography > li:has(:focus-visible) .paper-summary > p {
-  padding-top: 0.55rem;
-}
-
-@media (hover: none) {
-  .home-dw .paper-summary {
-    grid-template-rows: 1fr;
-    opacity: 1;
-  }
-  .home-dw .paper-summary > p {
-    padding-top: 0.55rem;
-  }
+.home-dw ol.bibliography > li:hover .paper-summary > p {
+  color: var(--global-text-color);
 }
 
 /* --- Experience timeline ------------------------------------------------ */
@@ -655,7 +647,7 @@ html[data-theme="dark"] .home-dw {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 0.2rem 0 1.5rem;
+  padding: 0.1rem 0 1.4rem;
 }
 
 .home-dw .timeline > li:last-child {
@@ -666,7 +658,7 @@ html[data-theme="dark"] .home-dw {
   content: "";
   position: absolute;
   left: calc(-1.5rem - 6.5px);
-  top: 0.55rem;
+  top: 0.5rem;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -682,10 +674,13 @@ html[data-theme="dark"] .home-dw {
   box-shadow: 0 0 0 5px var(--accent-soft);
 }
 
-.home-dw .tl-time {
-  font-family: $font-mono;
-  font-size: 0.75rem;
-  color: var(--global-text-color-light);
+.home-dw .tl-head,
+.home-dw .tl-sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .home-dw .tl-role {
@@ -693,9 +688,64 @@ html[data-theme="dark"] .home-dw {
   font-size: 1.02rem;
 }
 
-.home-dw .tl-org {
+.home-dw .tl-time {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  white-space: nowrap;
   color: var(--global-text-color-light);
-  font-size: 0.93rem;
+}
+
+.home-dw .tl-org {
+  font-size: 0.95rem;
+  color: var(--global-text-color);
+  font-style: italic;
+}
+
+.home-dw .tl-loc {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+}
+
+.home-dw .tl-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.45rem;
+}
+
+.home-dw .tl-chip {
+  padding: 0.15em 0.6em;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  color: var(--global-theme-color);
+  font-family: $font-mono;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.home-dw .tl-awards {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+}
+
+.home-dw .tl-awards > li {
+  position: relative;
+  padding-left: 1.4rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--global-text-color-light);
+}
+
+.home-dw .tl-awards > li::before {
+  content: "\f091"; /* trophy */
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-family: "Font Awesome 7 Free", "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 0.75rem;
+  color: #d39b2a;
 }
 
 /* --- Hobbies ------------------------------------------------------------ */
