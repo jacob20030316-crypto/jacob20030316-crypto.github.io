@@ -121,7 +121,19 @@ My research interests are **Agentic AI** and **Large Language Models**, with a f
 ## Hobbies
 
 <ul class="hobbies">
-  <li><i class="fa-solid fa-futbol"></i><span><b>Football</b>Huge FC Barcelona fan</span></li>
-  <li><i class="fa-solid fa-masks-theater"></i><span><b>Xiangsheng</b>Chinese crosstalk comedy</span></li>
-  <li><i class="fa-solid fa-dumbbell"></i><span><b>Fitness</b>A work in progress</span></li>
+  <li>
+    <a class="hobby-inner" href="/assets/img/hobbies/football.jpg" data-caption="Football · FC Barcelona">
+      <i class="hobby-icon fa-solid fa-futbol"></i><span><b>Football</b>Huge FC Barcelona fan</span><i class="hobby-cam fa-solid fa-camera" title="See photo"></i>
+    </a>
+  </li>
+  <li>
+    <a class="hobby-inner" href="/assets/img/hobbies/xiangsheng.jpg" data-caption="Xiangsheng · on stage">
+      <i class="hobby-icon fa-solid fa-masks-theater"></i><span><b>Xiangsheng</b>Chinese crosstalk comedy</span><i class="hobby-cam fa-solid fa-camera" title="See photo"></i>
+    </a>
+  </li>
+  <li>
+    <div class="hobby-inner">
+      <i class="hobby-icon fa-solid fa-dumbbell"></i><span><b>Fitness</b>A work in progress</span>
+    </div>
+  </li>
 </ul>

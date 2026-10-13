@@ -759,20 +759,23 @@ html[data-theme="dark"] .home-dw {
 }
 
 .home-dw .hobbies > li {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  padding: 0.9rem 1rem;
   border-radius: 14px;
   background: var(--global-card-bg-color);
   border: 1px solid var(--global-divider-color);
-  transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease,
-    background 0.3s ease;
+  overflow: hidden;
 }
 
-.home-dw .hobbies > li i {
+.home-dw .hobby-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  height: 100%;
+  padding: 0.9rem 1rem;
+  color: inherit;
+  text-decoration: none !important;
+}
+
+.home-dw .hobby-icon {
   display: grid;
   place-items: center;
   flex: 0 0 auto;
@@ -785,7 +788,7 @@ html[data-theme="dark"] .home-dw {
   transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-.home-dw .hobbies > li span {
+.home-dw .hobby-inner span {
   display: flex;
   flex-direction: column;
   font-size: 0.85rem;
@@ -793,9 +796,21 @@ html[data-theme="dark"] .home-dw {
   color: var(--global-text-color-light);
 }
 
-.home-dw .hobbies > li b {
+.home-dw .hobby-inner b {
   font-size: 0.95rem;
   color: var(--global-text-color);
+}
+
+/* camera hint on cards that open a photo */
+.home-dw .hobby-cam {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+  opacity: 0.55;
+  transition:
+    opacity 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .home-dw .hobbies > li:hover {
@@ -804,8 +819,61 @@ html[data-theme="dark"] .home-dw {
   box-shadow: 0 12px 26px -16px rgba(63, 125, 166, 0.45);
 }
 
-.home-dw .hobbies > li:hover i {
+.home-dw .hobbies > li:hover .hobby-icon {
   transform: rotate(-12deg) scale(1.1);
+}
+
+.home-dw .hobbies > li:hover .hobby-cam {
+  opacity: 1;
+  color: var(--global-theme-color);
+  transform: scale(1.15);
+}
+
+/* --- Photo lightbox ----------------------------------------------------- */
+.photo-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  padding: 2rem 1rem;
+  background: rgba(15, 18, 24, 0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  cursor: zoom-out;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.photo-lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.photo-lightbox img {
+  max-width: min(92vw, 960px);
+  max-height: 80vh;
+  border-radius: 14px;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+  transform: scale(0.94);
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.photo-lightbox.open img {
+  transform: none;
+}
+
+.photo-lightbox figcaption {
+  font-family: $font-mono;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* --- Scroll reveal (server-rendered initial hidden state, no flash) ----- */

@@ -105,6 +105,32 @@ layout: default
         });
       }
 
+      // Hobby photos: open in a lightbox instead of leaving the page
+      var box = document.createElement('figure');
+      box.className = 'photo-lightbox';
+      box.setAttribute('role', 'dialog');
+      box.setAttribute('aria-modal', 'true');
+      box.innerHTML = '<img alt=""><figcaption></figcaption>';
+      document.body.appendChild(box);
+      var boxImg = box.querySelector('img');
+      var boxCap = box.querySelector('figcaption');
+      function closeBox() {
+        box.classList.remove('open');
+      }
+      box.addEventListener('click', closeBox);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeBox();
+      });
+      root.querySelectorAll('a.hobby-inner').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          boxImg.src = a.getAttribute('href');
+          boxImg.alt = a.getAttribute('data-caption') || '';
+          boxCap.textContent = a.getAttribute('data-caption') || '';
+          box.classList.add('open');
+        });
+      });
+
       // Publication cards: cursor spotlight + subtle 3D tilt
       if (fine && !reduceMotion) {
         root.querySelectorAll('ol.bibliography > li').forEach(function (card) {
