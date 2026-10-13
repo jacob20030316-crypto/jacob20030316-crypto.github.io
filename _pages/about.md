@@ -128,12 +128,19 @@ My research interests are **Agentic AI** and **Large Language Models**, with a f
   </li>
   <li>
     <a class="hobby-inner" href="/assets/img/hobbies/xiangsheng.jpg" data-caption="Xiangsheng · on stage">
-      <i class="hobby-icon fa-solid fa-masks-theater"></i><span><b>Xiangsheng</b>Chinese crosstalk comedy</span><i class="hobby-cam fa-solid fa-camera" title="See photo"></i>
+      <i class="hobby-icon fa-solid fa-masks-theater"></i><span><b>Xiangsheng</b>Chinese crosstalk — I perform it too</span><i class="hobby-cam fa-solid fa-camera" title="See photo"></i>
     </a>
   </li>
   <li>
-    <div class="hobby-inner">
-      <i class="hobby-icon fa-solid fa-dumbbell"></i><span><b>Fitness</b>A work in progress</span>
-    </div>
+    <a class="hobby-inner" href="#fitness" data-caption="Fitness · Under review">
+      <i class="hobby-icon fa-solid fa-dumbbell"></i><span><b>Fitness</b>A work in progress</span><i class="hobby-cam fa-solid fa-hourglass-half" title="Coming soon"></i>
+      <template class="hobby-note">
+        <i class="fa-solid fa-dumbbell"></i>
+        <p class="note-title">Results pending</p>
+        <p>No photo yet: the gains are still under review.</p>
+        <p>I promise to post one here within three months.</p>
+        <span class="note-badge">Expected: Jan 2027</span>
+      </template>
+    </a>
   </li>
 </ul>

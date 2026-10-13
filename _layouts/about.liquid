@@ -7,7 +7,7 @@ layout: default
   <canvas class="hero-net" aria-hidden="true"></canvas>
   <header class="post-header">
     <div class="hero-text">
-      <p class="hero-eyebrow">Urbana–Champaign, IL</p>
+      <p class="hero-eyebrow">From Henan, China · Now in Champaign, IL</p>
       <h1 class="post-title">
         {% if site.title == 'blank' %}
           <span class="hero-name">{{ site.first_name }} {{ site.last_name }}</span>
@@ -110,10 +110,11 @@ layout: default
       box.className = 'photo-lightbox';
       box.setAttribute('role', 'dialog');
       box.setAttribute('aria-modal', 'true');
-      box.innerHTML = '<img alt=""><figcaption></figcaption>';
+      box.innerHTML = '<img alt=""><div class="lightbox-note"></div><figcaption></figcaption>';
       document.body.appendChild(box);
       var boxImg = box.querySelector('img');
       var boxCap = box.querySelector('figcaption');
+      var boxNote = box.querySelector('.lightbox-note');
       function closeBox() {
         box.classList.remove('open');
       }
@@ -124,7 +125,14 @@ layout: default
       root.querySelectorAll('a.hobby-inner').forEach(function (a) {
         a.addEventListener('click', function (e) {
           e.preventDefault();
-          boxImg.src = a.getAttribute('href');
+          var note = a.querySelector('template.hobby-note');
+          box.classList.toggle('has-note', !!note);
+          if (note) {
+            boxImg.removeAttribute('src');
+            boxNote.innerHTML = note.innerHTML;
+          } else {
+            boxImg.src = a.getAttribute('href');
+          }
           boxImg.alt = a.getAttribute('data-caption') || '';
           boxCap.textContent = a.getAttribute('data-caption') || '';
           box.classList.add('open');
