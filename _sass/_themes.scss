@@ -829,6 +829,146 @@ html[data-theme="dark"] .home-dw {
   transform: scale(1.15);
 }
 
+/* --- Visitor stats (navbar eye button + panel) ------------------------- */
+#visitor-toggle {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 0;
+  background-color: inherit;
+  color: var(--global-text-color-light);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+#visitor-toggle:hover {
+  color: var(--global-theme-color);
+}
+
+/* same vertical nudge the theme toggle gets */
+@media (min-width: 576px) {
+  #visitor-toggle {
+    transform: translateY(4px);
+  }
+}
+
+.visitor-lightbox {
+  cursor: default;
+}
+
+.visitor-panel {
+  width: min(92vw, 440px);
+  padding: 1.5rem 1.6rem 1.2rem;
+  border-radius: 18px;
+  background: var(--global-card-bg-color);
+  color: var(--global-text-color);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+  transform: scale(0.94);
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.visitor-lightbox.open .visitor-panel {
+  transform: none;
+}
+
+.visitor-panel .vp-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+}
+
+.visitor-panel .vp-head i {
+  color: var(--global-theme-color);
+}
+
+.visitor-panel .vp-stats {
+  display: flex;
+  gap: 2.4rem;
+  margin: 0.9rem 0 1.2rem;
+}
+
+.visitor-panel .vp-stats > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.visitor-panel .vp-num {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.visitor-panel .vp-stats > div:last-child .vp-num {
+  color: var(--global-theme-color);
+}
+
+.visitor-panel .vp-label {
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+}
+
+.visitor-panel .vp-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 90px;
+  padding-bottom: 1px;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.visitor-panel .vp-bar {
+  flex: 1 1 0;
+  min-height: 3px;
+  height: 4%;
+  border-radius: 3px 3px 0 0;
+  background: rgba(63, 125, 166, 0.35);
+  transition:
+    height 0.5s cubic-bezier(0.2, 0.7, 0.2, 1),
+    background 0.2s ease;
+}
+
+.visitor-panel .vp-bar.pending {
+  background: var(--global-divider-color);
+  animation: vp-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes vp-pulse {
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.visitor-panel .vp-bar.is-today {
+  background: linear-gradient(180deg, #5b6fd8, #3f7da6);
+}
+
+.visitor-panel .vp-bar:not(.pending):hover {
+  background: var(--global-theme-color);
+}
+
+.visitor-panel .vp-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.45rem;
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  color: var(--global-text-color-light);
+}
+
+.visitor-panel .vp-hover {
+  color: var(--global-text-color);
+}
+
 /* --- Photo lightbox ----------------------------------------------------- */
 /* never let decorative layers widen the page (keeps fixed overlays centered on phones) */
 html {

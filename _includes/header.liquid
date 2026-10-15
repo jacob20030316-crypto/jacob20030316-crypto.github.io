@@ -133,6 +133,12 @@
               </button>
             </li>
           {% endif %}
+          {% comment %} Local override: visitor stats button (see _includes/visitors.liquid). {% endcomment %}
+          <li class="toggle-container">
+            <button id="visitor-toggle" type="button" title="Visitors" aria-label="Show visitor stats">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </li>
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
             <li class="toggle-container">
@@ -155,4 +161,5 @@
       </div>
     </progress>
   {% endif %}
+  {% include visitors.liquid %}
 </header>
