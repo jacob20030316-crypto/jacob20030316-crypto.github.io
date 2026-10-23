@@ -118,7 +118,7 @@ My research interests are **Agentic AI** and **Large Language Models**, with a f
   </li>
   <li>
     <div class="tl-head">
-      <span class="tl-role">AI Algorithm Engineer</span>
+      <span class="tl-role">AI Algorithm Engineer Intern</span>
       <span class="tl-time">Jul 2023 – Oct 2023</span>
     </div>
     <div class="tl-sub">
