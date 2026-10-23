@@ -21,7 +21,7 @@ latest_posts:
   enabled: false
 ---
 
-Hi! I am **Dehao Wu** (you can also call me **Jacob Wood**), an M.S. student in Information Science at the University of Illinois Urbana-Champaign (UIUC), advised by [Prof. ChengXiang Zhai](https://czhai.cs.illinois.edu/) and [Prof. Haohan Wang](https://ischool.illinois.edu/people/haohan-wang).
+Hi! I am **Dehao Wu** (you can also call me **Jacob Wood**), an M.S. student at the University of Illinois Urbana-Champaign (UIUC), advised by [Prof. ChengXiang Zhai](https://czhai.cs.illinois.edu/) and [Prof. Haohan Wang](https://ischool.illinois.edu/people/haohan-wang).
 
 My research interests are **Agentic AI** and **Large Language Models**, with a focus on **Multi-Agent Systems**, **AI for Scientific Discovery**, **Biomedical AI**, and **Multimodal Learning**.
 
