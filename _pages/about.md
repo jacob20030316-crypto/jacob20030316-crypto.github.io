@@ -116,6 +116,16 @@ My research interests are **Agentic AI** and **Large Language Models**, with a f
       <span class="tl-loc">Beijing, China</span>
     </div>
   </li>
+  <li>
+    <div class="tl-head">
+      <span class="tl-role">AI Algorithm Engineer</span>
+      <span class="tl-time">Jul 2023 – Oct 2023</span>
+    </div>
+    <div class="tl-sub">
+      <span class="tl-org">Hunan Zhizhou Technology (Beijing)</span>
+      <span class="tl-loc">Beijing, China</span>
+    </div>
+  </li>
 </ul>
 
 ## Hobbies
