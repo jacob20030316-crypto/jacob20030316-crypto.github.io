@@ -132,24 +132,21 @@ My research interests are **Agentic AI** and **Large Language Models**, with a f
 
 <ul class="hobbies">
   <li>
-    <a class="hobby-inner" href="/assets/img/hobbies/football.jpg" data-caption="Football · FC Barcelona">
-      <i class="hobby-icon fa-solid fa-futbol"></i><span><b>Football</b>Huge FC Barcelona fan</span><i class="hobby-cam fa-solid fa-camera" title="See photo"></i>
+    <a class="hobby-inner" href="/assets/img/hobbies/football.jpg" data-photos="/assets/img/hobbies/football.jpg,/assets/img/hobbies/football-2.jpg">
+      <i class="hobby-icon fa-solid fa-futbol"></i><span><b>Football</b></span><i class="hobby-cam fa-solid fa-camera" title="See photos"></i>
     </a>
   </li>
   <li>
-    <a class="hobby-inner" href="/assets/img/hobbies/xiangsheng.jpg" data-caption="Xiangsheng · on stage">
-      <i class="hobby-icon fa-solid fa-masks-theater"></i><span><b>Xiangsheng</b>Chinese crosstalk — I perform it too</span><i class="hobby-cam fa-solid fa-camera" title="See photo"></i>
+    <a class="hobby-inner" href="/assets/img/hobbies/xiangsheng.jpg">
+      <i class="hobby-icon fa-solid fa-masks-theater"></i><span><b>Xiangsheng</b></span><i class="hobby-cam fa-solid fa-camera" title="See photo"></i>
     </a>
   </li>
   <li>
-    <a class="hobby-inner" href="#fitness" data-caption="Fitness · Under review">
-      <i class="hobby-icon fa-solid fa-dumbbell"></i><span><b>Fitness</b>A work in progress</span><i class="hobby-cam fa-solid fa-hourglass-half" title="Coming soon"></i>
+    <a class="hobby-inner" href="#fitness">
+      <i class="hobby-icon fa-solid fa-dumbbell"></i><span><b>Fitness</b></span><i class="hobby-cam fa-solid fa-hourglass-half" title="Coming soon"></i>
       <template class="hobby-note">
         <i class="fa-solid fa-dumbbell"></i>
-        <p class="note-title">Results pending</p>
-        <p>No photo yet: the gains are still under review.</p>
-        <p>I promise to post one here within three months.</p>
-        <span class="note-badge">Expected: Jan 2027</span>
+        <p class="note-title">Pending</p>
       </template>
     </a>
   </li>

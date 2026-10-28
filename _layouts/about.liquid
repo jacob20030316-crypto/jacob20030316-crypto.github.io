@@ -112,10 +112,9 @@ layout: default
       box.setAttribute('aria-modal', 'true');
       box.innerHTML =
         '<button class="lightbox-close" type="button" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>' +
-        '<img alt=""><div class="lightbox-note"></div><figcaption></figcaption>';
+        '<div class="lightbox-photos"></div><div class="lightbox-note"></div>';
       document.body.appendChild(box);
-      var boxImg = box.querySelector('img');
-      var boxCap = box.querySelector('figcaption');
+      var boxPhotos = box.querySelector('.lightbox-photos');
       var boxNote = box.querySelector('.lightbox-note');
       function closeBox() {
         box.classList.remove('open');
@@ -129,15 +128,20 @@ layout: default
         a.addEventListener('click', function (e) {
           e.preventDefault();
           var note = a.querySelector('template.hobby-note');
+          var label = a.querySelector('b') ? a.querySelector('b').textContent : '';
           box.classList.toggle('has-note', !!note);
+          boxPhotos.innerHTML = '';
           if (note) {
-            boxImg.removeAttribute('src');
             boxNote.innerHTML = note.innerHTML;
           } else {
-            boxImg.src = a.getAttribute('href');
+            // data-photos holds a comma-separated list; otherwise show the single linked photo
+            (a.getAttribute('data-photos') || a.getAttribute('href')).split(',').forEach(function (src) {
+              var img = document.createElement('img');
+              img.src = src.trim();
+              img.alt = label;
+              boxPhotos.appendChild(img);
+            });
           }
-          boxImg.alt = a.getAttribute('data-caption') || '';
-          boxCap.textContent = a.getAttribute('data-caption') || '';
           box.classList.add('open');
           document.documentElement.style.overflow = 'hidden';
         });

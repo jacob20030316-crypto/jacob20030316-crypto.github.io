@@ -1025,7 +1025,17 @@ html {
   visibility: visible;
 }
 
-.photo-lightbox img {
+.photo-lightbox .lightbox-photos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.photo-lightbox .lightbox-photos img {
+  display: block;
+  width: auto;
+  height: auto;
   max-width: min(92vw, 960px);
   max-height: 80vh;
   border-radius: 14px;
@@ -1034,13 +1044,32 @@ html {
   transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-.photo-lightbox.open img {
+/* two or more photos: same height side by side, stacked on phones */
+.photo-lightbox .lightbox-photos img:not(:only-child) {
+  /* equal heights; 38vw keeps a 4:3 + square pair inside the viewport */
+  height: min(60vh, 520px, 38vw);
+  max-width: none;
+  max-height: none;
+}
+
+@media (max-width: 768px) {
+  .photo-lightbox .lightbox-photos {
+    flex-direction: column;
+  }
+  .photo-lightbox .lightbox-photos img:not(:only-child) {
+    height: auto;
+    max-width: 92vw;
+    max-height: 38vh;
+  }
+}
+
+.photo-lightbox.open .lightbox-photos img {
   transform: none;
 }
 
 /* text card shown instead of a photo (e.g. the fitness "under review" note) */
 .photo-lightbox .lightbox-note,
-.photo-lightbox.has-note img {
+.photo-lightbox.has-note .lightbox-photos {
   display: none;
 }
 
@@ -1094,7 +1123,7 @@ html {
 }
 
 .photo-lightbox .lightbox-note .note-title {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--global-text-color);
@@ -1108,13 +1137,6 @@ html {
   color: #b07d17;
   font-family: $font-mono;
   font-size: 0.75rem;
-}
-
-.photo-lightbox figcaption {
-  font-family: $font-mono;
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.85);
 }
 
 /* --- Scroll reveal (server-rendered initial hidden state, no flash) ----- */
