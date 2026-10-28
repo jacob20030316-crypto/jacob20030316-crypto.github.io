@@ -748,6 +748,12 @@ html[data-theme="dark"] .home-dw {
   color: #d39b2a;
 }
 
+/* supervision / project notes use a cap icon instead of the trophy */
+.home-dw .tl-notes > li::before {
+  content: "\f501"; /* user-graduate */
+  color: var(--global-theme-color);
+}
+
 /* --- Hobbies ------------------------------------------------------------ */
 .home-dw .hobbies {
   list-style: none;

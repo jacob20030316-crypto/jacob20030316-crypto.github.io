@@ -70,6 +70,9 @@ My research interests are **Agentic AI** and **Large Language Models**, with a f
       <span class="tl-loc">Austin, TX</span>
     </div>
     <div class="tl-chips"><span class="tl-chip">GPA 4.00 / 4.00</span></div>
+    <ul class="tl-awards tl-notes">
+      <li>Academic project supervised by <a href="https://teymourian.de/">Prof. Kia Teymourian</a></li>
+    </ul>
   </li>
 </ul>
 
