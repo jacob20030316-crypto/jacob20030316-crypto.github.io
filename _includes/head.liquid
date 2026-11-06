@@ -102,13 +102,13 @@
     id="highlight_theme_dark"
   >
   {% comment %}
-    Local override: open in dark mode unless the visitor has picked a theme,
-    and make the toggle a simple dark <-> light switch (no "system" step).
+    Local override: open in light mode unless the visitor has picked a theme
+    with the toggle ("dw-theme-chosen"), and make the toggle a simple
+    dark <-> light switch (no "system" step).
   {% endcomment %}
   <script>
     try {
-      var savedTheme = localStorage.getItem('theme');
-      if (savedTheme !== 'light' && savedTheme !== 'dark') localStorage.setItem('theme', 'dark');
+      if (!localStorage.getItem('dw-theme-chosen')) localStorage.setItem('theme', 'light');
     } catch (e) {}
     document.addEventListener(
       'click',
@@ -116,6 +116,9 @@
         if (!e.target.closest || !e.target.closest('#light-toggle')) return;
         e.stopImmediatePropagation();
         setThemeSetting(determineThemeSetting() === 'dark' ? 'light' : 'dark');
+        try {
+          localStorage.setItem('dw-theme-chosen', '1');
+        } catch (err) {}
       },
       true
     );
