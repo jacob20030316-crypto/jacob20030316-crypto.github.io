@@ -538,6 +538,45 @@ html[data-theme="dark"] .home-dw {
   transform: translateY(-5px);
 }
 
+/* paper thumbnail: figure on the left, text on the right (stacked on phones) */
+.home-dw ol.bibliography > li .row.has-thumb {
+  display: grid;
+  grid-template-columns: 38% minmax(0, 1fr);
+  gap: 1.3rem;
+  align-items: center;
+}
+
+.home-dw .paper-thumb figure {
+  margin: 0;
+}
+
+.home-dw .paper-thumb img.preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--global-divider-color);
+  cursor: zoom-in;
+  transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.home-dw ol.bibliography > li:hover .paper-thumb img.preview {
+  transform: scale(1.03);
+}
+
+@media (max-width: 576px) {
+  .home-dw ol.bibliography > li .row.has-thumb {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+  .home-dw .paper-thumb img.preview {
+    max-height: 240px;
+  }
+}
+
 .home-dw ol.bibliography .title {
   font-family: $font-body;
   color: var(--global-text-color);

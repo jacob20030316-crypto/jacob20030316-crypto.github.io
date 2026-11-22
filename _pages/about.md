@@ -109,26 +109,6 @@ My current research focuses on **Agentic AI**, especially **multi-agent systems 
       <span class="tl-loc">Suzhou, China</span>
     </div>
   </li>
-  <li>
-    <div class="tl-head">
-      <span class="tl-role">Data Analysis Intern</span>
-      <span class="tl-time">Aug 2024 – Oct 2024</span>
-    </div>
-    <div class="tl-sub">
-      <span class="tl-org">JD Group Inc</span>
-      <span class="tl-loc">Beijing, China</span>
-    </div>
-  </li>
-  <li>
-    <div class="tl-head">
-      <span class="tl-role">AI Algorithm Engineer Intern</span>
-      <span class="tl-time">Jul 2023 – Oct 2023</span>
-    </div>
-    <div class="tl-sub">
-      <span class="tl-org">Hunan Zhizhou Technology (Beijing)</span>
-      <span class="tl-loc">Beijing, China</span>
-    </div>
-  </li>
 </ul>
 
 ## Hobbies
