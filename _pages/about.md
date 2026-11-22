@@ -36,7 +36,7 @@ My current research focuses on **Agentic AI**, especially **multi-agent systems 
       <span class="tl-time">Expected May 2027</span>
     </div>
     <div class="tl-sub">
-      <span class="tl-org">M.S. in Information Science</span>
+      <span class="tl-org">M.S. in Information Management</span>
       <span class="tl-loc">Urbana, IL</span>
     </div>
     <div class="tl-chips"><span class="tl-chip">GPA 4.00 / 4.00</span></div>
